@@ -1,0 +1,1222 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-12-27T19:55:00.068Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_a4f2881c40e74bd7a8e3a1fa76028a48",
+			"created": 1539731378651,
+			"description": "",
+			"modified": 1539731378651,
+			"name": "Eagle Eye Networks",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_d7c2f7d7647145a88a34abb21a111726",
+			"color": null,
+			"created": 1539731378671,
+			"data": {
+				"api_key": "",
+				"base_url": "https://login.eagleeyenetworks.com",
+				"host_url": "eagleeyenetwroks.com",
+				"personal_password": "",
+				"personal_username": ""
+			},
+			"isPrivate": false,
+			"metaSortKey": 1539731378671,
+			"modified": 1544645138513,
+			"name": "New Environment",
+			"parentId": "wrk_a4f2881c40e74bd7a8e3a1fa76028a48",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_cc91432b22cf4536a66518e1851bd27c",
+			"cookies": [],
+			"created": 1539731378678,
+			"modified": 1545589013266,
+			"name": "Default Jar",
+			"parentId": "wrk_a4f2881c40e74bd7a8e3a1fa76028a48",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_79adbfd5b3bd43f5854553f1abb3086f",
+			"created": 1542122875492,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1542122891611,
+			"modified": 1542122900236,
+			"name": "Login",
+			"parentId": "wrk_a4f2881c40e74bd7a8e3a1fa76028a48",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_a96193d1de0d45c489e2eb39143dd6bc",
+			"created": 1542122887901,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1542122890683.5,
+			"modified": 1542122905006,
+			"name": "User",
+			"parentId": "wrk_a4f2881c40e74bd7a8e3a1fa76028a48",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_9b57037dc25b4d578f900f9c205ad071",
+			"created": 1542122895321,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1542122889756,
+			"modified": 1542122902459,
+			"name": "Devices",
+			"parentId": "wrk_a4f2881c40e74bd7a8e3a1fa76028a48",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_0b7fb9edb15e47ddab28ef5158e77036",
+			"created": 1542124403168,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1542122889743.5,
+			"modified": 1542146338377,
+			"name": "Media",
+			"parentId": "wrk_a4f2881c40e74bd7a8e3a1fa76028a48",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_0981a052f7f54c0fac15304a1e0eac98",
+			"created": 1542146321353,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1542122889731,
+			"modified": 1542146336031,
+			"name": "Poll",
+			"parentId": "wrk_a4f2881c40e74bd7a8e3a1fa76028a48",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_fe599b4511d349568cfc7ec2f4242e31",
+			"created": 1544564016284,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1542122889681,
+			"modified": 1544564021602,
+			"name": "Analytics",
+			"parentId": "wrk_a4f2881c40e74bd7a8e3a1fa76028a48",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_348cd3e47d0b4dbe8d31f37d5e7e2fab",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"username\": \"{{ personal_username }}\",\n\t\"password\": \"{{ personal_password }}\"\n}"
+			},
+			"created": 1539731446148,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_5d5077cfb0d547ae903c9de8eb80c0a5",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_96f8680aeddb478385d32ff3c9f614f3",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				},
+				{
+					"id": "pair_a24a64d4d8c44e2a88588c4c78004417",
+					"name": "",
+					"value": ""
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1539731446148,
+			"method": "POST",
+			"modified": 1545589008659,
+			"name": "Login (step 1)",
+			"parameters": [],
+			"parentId": "fld_79adbfd5b3bd43f5854553f1abb3086f",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/g/aaa/authenticate",
+			"_type": "request"
+		},
+		{
+			"_id": "req_3e602c4ee2444cd98ee11819272d8e3b",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{% response 'body', 'req_348cd3e47d0b4dbe8d31f37d5e7e2fab', '$' %}"
+			},
+			"created": 1542122792672,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d26218d841bf47a6b0f5aac1e284a3b4",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_48b7b58768914f5683f8e54c62803c45",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1539731446098,
+			"method": "POST",
+			"modified": 1545588960285,
+			"name": "Login (step 2)",
+			"parameters": [
+				{
+					"disabled": true,
+					"id": "pair_314fdee97e76415b9fe9608ccba2606c",
+					"name": "token",
+					"value": "WUbLiMLJQvd0dQ3y4GuY/E1uiF7VjoPr68NMjHNtByNjOhixL2Oni1If4kHZGQKqn0lZZEvUr6hm4m/0++TEIcyFUMg8WoJpSWu6pKRjfUWjyzS/8eAzegOXRgF9ZOYKDYzbk8jKo1gl4vzjQRCuPQQqlmF8ik97THrs9f6/QdrcM07dKZEi+kWl/7cxuJoxOfOlyK2/AxPNP8sgPhEJ5fYd1CjJtmXxgFRX1BOiTEZ94GxFTiQ76f2EhlDgEtSZ3mo/3Cqf3lh071tgfOSdS32LpxBpzf3yrQ/MuWWFucg7miSyzAnN3Pmjv3EFLdgIIbx+AqrhUw0/qF0cAwCRFQ=="
+				}
+			],
+			"parentId": "fld_79adbfd5b3bd43f5854553f1abb3086f",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/g/aaa/authorize",
+			"_type": "request"
+		},
+		{
+			"_id": "req_6ba00bc37f2542cea60ad713773e2b5c",
+			"authentication": {},
+			"body": {},
+			"created": 1542745010075,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_4873872335cc4470889777c708a1cfc9",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1539731446048,
+			"method": "GET",
+			"modified": 1545057169281,
+			"name": "is_auth",
+			"parameters": [],
+			"parentId": "fld_79adbfd5b3bd43f5854553f1abb3086f",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/g/aaa/isauth",
+			"_type": "request"
+		},
+		{
+			"_id": "req_008920d696f14f3891f939349fe605db",
+			"authentication": {},
+			"body": {},
+			"created": 1542122993766,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_e06c8c1bccad4f068cf6e216235d9cf7",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542122993766,
+			"method": "GET",
+			"modified": 1543257806924,
+			"name": "Current User",
+			"parameters": [],
+			"parentId": "fld_a96193d1de0d45c489e2eb39143dd6bc",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/g/user",
+			"_type": "request"
+		},
+		{
+			"_id": "req_643e69fe7ac345e0b11515ba2501aa93",
+			"authentication": {},
+			"body": {},
+			"created": 1542123022978,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_5387069d9f164053a7ec7b6209f2ed49",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542122993716,
+			"method": "GET",
+			"modified": 1543257805934,
+			"name": "List of Users",
+			"parameters": [],
+			"parentId": "fld_a96193d1de0d45c489e2eb39143dd6bc",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/g/user/list",
+			"_type": "request"
+		},
+		{
+			"_id": "req_0297f667678548d3a3af4513b22526a8",
+			"authentication": {},
+			"body": {},
+			"created": 1542123072384,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_91bd0142195f4437b61432cddf3807ec",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542122993741,
+			"method": "GET",
+			"modified": 1544558789104,
+			"name": "Get User",
+			"parameters": [
+				{
+					"id": "pair_c2a7cbbc487b4969a768f2d90a06a116",
+					"name": "id",
+					"value": "cafe2cc0"
+				}
+			],
+			"parentId": "fld_a96193d1de0d45c489e2eb39143dd6bc",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/g/user",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f6a8a5b085744f22acf08154cf5a3ef2",
+			"authentication": {},
+			"body": {},
+			"created": 1542123208266,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_3dcf41b787ae44548696c5f7b3950d6f",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542123208266,
+			"method": "GET",
+			"modified": 1545057772206,
+			"name": "Device List",
+			"parameters": [],
+			"parentId": "fld_9b57037dc25b4d578f900f9c205ad071",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/g/device/list",
+			"_type": "request"
+		},
+		{
+			"_id": "req_e25eccb85c324632a5a2a48d6fa7ee9b",
+			"authentication": {},
+			"body": {},
+			"created": 1542123609819,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_200729b8aac04353832f2e2327bf6e1a",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542123609819,
+			"method": "GET",
+			"modified": 1545588671396,
+			"name": "Get Device",
+			"parameters": [
+				{
+					"id": "pair_14a07f91ccb04a61b6157904f078932a",
+					"multiline": false,
+					"name": "id",
+					"type": "text",
+					"value": "100c42ce"
+				}
+			],
+			"parentId": "fld_9b57037dc25b4d578f900f9c205ad071",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/g/device",
+			"_type": "request"
+		},
+		{
+			"_id": "req_d59a2cee18b64cd0b176bbaaf7bb0e3a",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"Camera from API\",\n\t\"settings\": {\n\t\t\"bridge\": \"10082d20\",\n\t\t\"guid\": \"a94358a0-4dfb-11e3-b613-b5a900d6b21a\",\n\t\t\"username\": \"admin\",\n\t\t\"password\": \"8874236462\"\n\t}\n}"
+			},
+			"created": 1545350340566,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_0c688bae61e64adc839c90a15580ae20",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542123208216,
+			"method": "PUT",
+			"modified": 1545411436458,
+			"name": "Add Camera",
+			"parameters": [],
+			"parentId": "fld_9b57037dc25b4d578f900f9c205ad071",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/g/device",
+			"_type": "request"
+		},
+		{
+			"_id": "req_3b108fcf77594d4f8a754586d2611194",
+			"authentication": {},
+			"body": {},
+			"created": 1542124416249,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_1fd86e6ce4104db284d84054348185de",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542124451343,
+			"method": "GET",
+			"modified": 1545057179928,
+			"name": "Get Image [prev]",
+			"parameters": [
+				{
+					"disabled": false,
+					"id": "pair_1578024c551a41f287ab7ae965f0ac06",
+					"name": "id",
+					"value": "100d93f9"
+				},
+				{
+					"disabled": false,
+					"id": "pair_9e44db4bea204b5ba511ceabb9e871d8",
+					"name": "timestamp",
+					"value": "now"
+				},
+				{
+					"disabled": false,
+					"id": "pair_0499a4b2852641c88002319454d67138",
+					"name": "asset_class",
+					"value": "all"
+				}
+			],
+			"parentId": "fld_0b7fb9edb15e47ddab28ef5158e77036",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/asset/prev/image.jpeg",
+			"_type": "request"
+		},
+		{
+			"_id": "req_996b8fa688e9447ca22035aa52bc5d48",
+			"authentication": {},
+			"body": {},
+			"created": 1542124420225,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_727455ac9d7f41f2a710766c49ea40ba",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542124451299.25,
+			"method": "GET",
+			"modified": 1544649080331,
+			"name": "Get Video (live)",
+			"parameters": [
+				{
+					"id": "pair_a55b9db2a3db46688ff2909e53cfbe73",
+					"name": "id",
+					"value": "100e5950"
+				},
+				{
+					"disabled": false,
+					"id": "pair_d31420deae4048e3949c53ff25f92d8d",
+					"name": "start_timestamp",
+					"value": "now"
+				},
+				{
+					"disabled": false,
+					"id": "pair_7f3bc65d15ad4ea4bc2a45b569460910",
+					"name": "end_timestamp",
+					"value": "+300000"
+				}
+			],
+			"parentId": "fld_0b7fb9edb15e47ddab28ef5158e77036",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/asset/play/video.flv",
+			"_type": "request"
+		},
+		{
+			"_id": "req_fd6ddced5b7041bb88a78709b002fd62",
+			"authentication": {},
+			"body": {},
+			"created": 1542124433186,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_f00be687bdb24de69e9eabcf648a1e10",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542124451305.5,
+			"method": "GET",
+			"modified": 1544645356006,
+			"name": "List of Images",
+			"parameters": [
+				{
+					"id": "pair_e2ed4f14c5f847f781ae340dc28496b2",
+					"name": "id",
+					"value": "100ee0d9"
+				},
+				{
+					"id": "pair_fd3f0f9eaa214a8888cd9eedd340fba7",
+					"name": "count",
+					"value": "-10"
+				},
+				{
+					"id": "pair_36552d1642c444a9bfaa4ca458c0d77a",
+					"name": "asset_class",
+					"value": "thumb"
+				},
+				{
+					"disabled": false,
+					"id": "pair_621cdd04868245578db903e2e3da6789",
+					"name": "start_timestamp",
+					"value": "now"
+				},
+				{
+					"disabled": true,
+					"id": "pair_bb25058444d04c2e90f4cd94f1b955f9",
+					"name": "end_timestamp",
+					"value": "now"
+				}
+			],
+			"parentId": "fld_0b7fb9edb15e47ddab28ef5158e77036",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/asset/list/image",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f158fa64090f41f2bddc9418713cc1b5",
+			"authentication": {},
+			"body": {},
+			"created": 1542124437240,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_65c59abebec543dfa6a72edaac71a908",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542124451243,
+			"method": "GET",
+			"modified": 1545054878993,
+			"name": "List of Videos",
+			"parameters": [
+				{
+					"id": "pair_9d4bea9a1d6740b090364b311ac93673",
+					"name": "id",
+					"value": "100ee0d9"
+				},
+				{
+					"id": "pair_e2cb5f63e6d94b06ac90d3e93470a852",
+					"name": "start_timestamp",
+					"value": "now"
+				},
+				{
+					"disabled": false,
+					"id": "pair_be88b8dd540f4c05b28b8a8113c8fcfc",
+					"name": "count",
+					"value": "-5"
+				},
+				{
+					"disabled": true,
+					"id": "pair_dd19a7c5a7454283a8b364a920eaeb20",
+					"name": "end_timestamp",
+					"value": "20181120235959.999"
+				}
+			],
+			"parentId": "fld_0b7fb9edb15e47ddab28ef5158e77036",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/asset/list/video",
+			"_type": "request"
+		},
+		{
+			"_id": "req_3549c248c246498293369b8f2366e02d",
+			"authentication": {},
+			"body": {},
+			"created": 1542124451293,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c2a59f0678874de28130c3ff6ec24113",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542124451293,
+			"method": "GET",
+			"modified": 1544649083076,
+			"name": "Get Video (cloud)",
+			"parameters": [
+				{
+					"id": "pair_804a993f836b4d9dae875a3deb38f878",
+					"name": "id",
+					"value": "100ee0d9"
+				},
+				{
+					"id": "pair_bd5f50f95bfd4bfca065c2279a36092d",
+					"name": "start_timestamp",
+					"value": "20181209002634.490"
+				},
+				{
+					"id": "pair_96a86a1d6999449e81c11dd98120411f",
+					"name": "end_timestamp",
+					"value": "20181211002656.653"
+				},
+				{
+					"id": "pair_5b33a8e5e3d74dc8b9eb722bf717317f",
+					"name": "webhook_url",
+					"value": "https%3A//mcotton.tech/dumpster/"
+				}
+			],
+			"parentId": "fld_0b7fb9edb15e47ddab28ef5158e77036",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/asset/cloud/video.flv",
+			"_type": "request"
+		},
+		{
+			"_id": "req_e350bbfb18104852a7e3f55d803a1e14",
+			"authentication": {},
+			"body": {},
+			"created": 1542124748615,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_4597addf80314c1295b130a66fd931cf",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542124451330.5,
+			"method": "GET",
+			"modified": 1545057184491,
+			"name": "Get Image [after]",
+			"parameters": [
+				{
+					"id": "pair_1578024c551a41f287ab7ae965f0ac06",
+					"name": "id",
+					"value": "100d93f9"
+				},
+				{
+					"id": "pair_9e44db4bea204b5ba511ceabb9e871d8",
+					"name": "timestamp",
+					"value": "now"
+				},
+				{
+					"id": "pair_0499a4b2852641c88002319454d67138",
+					"name": "asset_class",
+					"value": "all"
+				}
+			],
+			"parentId": "fld_0b7fb9edb15e47ddab28ef5158e77036",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/asset/after/image.jpeg",
+			"_type": "request"
+		},
+		{
+			"_id": "req_222b95dc741043c2807d4497b85ec158",
+			"authentication": {},
+			"body": {},
+			"created": 1542124750623,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_b33cfa5350284099b046a7ed5a6fc1ce",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542124451324.25,
+			"method": "GET",
+			"modified": 1543257785823,
+			"name": "Get Image [next]",
+			"parameters": [
+				{
+					"id": "pair_1578024c551a41f287ab7ae965f0ac06",
+					"name": "id",
+					"value": "100d93f9"
+				},
+				{
+					"id": "pair_9e44db4bea204b5ba511ceabb9e871d8",
+					"name": "timestamp",
+					"value": "now"
+				},
+				{
+					"id": "pair_0499a4b2852641c88002319454d67138",
+					"name": "asset_class",
+					"value": "all"
+				}
+			],
+			"parentId": "fld_0b7fb9edb15e47ddab28ef5158e77036",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/asset/next/image.jpeg",
+			"_type": "request"
+		},
+		{
+			"_id": "req_458b749fd1f84f9ba09924757960ddc7",
+			"authentication": {},
+			"body": {},
+			"created": 1542124839830,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_dd36368e2eb24c22ac061d4757c288a8",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542124451322.6875,
+			"method": "GET",
+			"modified": 1544648916541,
+			"name": "Get Image [cloud]",
+			"parameters": [
+				{
+					"id": "pair_1578024c551a41f287ab7ae965f0ac06",
+					"name": "id",
+					"value": "100ee0d9"
+				},
+				{
+					"id": "pair_9e44db4bea204b5ba511ceabb9e871d8",
+					"name": "timestamp",
+					"value": "now"
+				},
+				{
+					"id": "pair_0499a4b2852641c88002319454d67138",
+					"name": "asset_class",
+					"value": "all"
+				},
+				{
+					"id": "pair_cff19009fad34784800cdc993fcf62f6",
+					"name": "webhook_url",
+					"value": "https%3A//mcotton.tech/dumpster/"
+				}
+			],
+			"parentId": "fld_0b7fb9edb15e47ddab28ef5158e77036",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/asset/cloud/image.jpeg",
+			"_type": "request"
+		},
+		{
+			"_id": "req_97daf4b5bc024dab89feb48e8420d5df",
+			"authentication": {},
+			"body": {},
+			"created": 1542124877710,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c08065bd109940dc920b7fc81c69bd99",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542124451336.75,
+			"method": "GET",
+			"modified": 1545057754014,
+			"name": "Get Image [asset]",
+			"parameters": [
+				{
+					"id": "pair_1578024c551a41f287ab7ae965f0ac06",
+					"name": "id",
+					"value": "100ee0d9"
+				},
+				{
+					"id": "pair_9e44db4bea204b5ba511ceabb9e871d8",
+					"name": "timestamp",
+					"value": "20181206203213.901"
+				},
+				{
+					"id": "pair_0499a4b2852641c88002319454d67138",
+					"name": "asset_class",
+					"value": "all"
+				}
+			],
+			"parentId": "fld_0b7fb9edb15e47ddab28ef5158e77036",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/asset/asset/image.jpeg",
+			"_type": "request"
+		},
+		{
+			"_id": "req_9f16d10594e742c6a32a7027bd3e8477",
+			"authentication": {},
+			"body": {},
+			"created": 1542145159268,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c0026005585c4577a9d52b8c7f477fbb",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542124451297.6875,
+			"method": "GET",
+			"modified": 1544732164811,
+			"name": "Get Video (historic)",
+			"parameters": [
+				{
+					"id": "pair_a55b9db2a3db46688ff2909e53cfbe73",
+					"name": "id",
+					"value": "100ee0d9"
+				},
+				{
+					"disabled": true,
+					"id": "pair_d31420deae4048e3949c53ff25f92d8d",
+					"name": "start_timestamp",
+					"value": "20181211000041.027"
+				},
+				{
+					"disabled": true,
+					"id": "pair_7f3bc65d15ad4ea4bc2a45b569460910",
+					"name": "end_timestamp",
+					"value": "20181211000047.072"
+				},
+				{
+					"disabled": true,
+					"id": "pair_69f0bc16242d499490fa7e4f7bcead19",
+					"name": "options",
+					"value": "coalesce"
+				},
+				{
+					"disabled": true,
+					"id": "pair_bd6bdee54dcd42f7975df2138c39561b",
+					"name": "count",
+					"value": "+10"
+				}
+			],
+			"parentId": "fld_0b7fb9edb15e47ddab28ef5158e77036",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/asset/play/video.mp4",
+			"_type": "request"
+		},
+		{
+			"_id": "req_39dc6d9e972e44788d43517021143b02",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"cameras\": {\n\t\t\"100c42ce\": {\n\t\t\t\"resource\": [\n\t\t\t\t\"pre\",\n\t\t\t\t\"event\"\n\t\t\t],\n\t\t\t\"event\": [\n\t\t\t\t\"ROME\",\n\t\t\t\t\"ROMS\"\n\t\t\t]\n\t\t}\n\t}\n}"
+			},
+			"created": 1542146362317,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c27720268b7548be8693fa7277cc0ccf",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_9732d344e4154960b17fa0af8a069269",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1542122889718.5,
+			"method": "POST",
+			"modified": 1545325068200,
+			"name": "Start Long Polling",
+			"parameters": [],
+			"parentId": "fld_0981a052f7f54c0fac15304a1e0eac98",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/poll",
+			"_type": "request"
+		},
+		{
+			"_id": "req_040f41411638483ba0a462b58bf4efc0",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
+			"created": 1542146533322,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c27720268b7548be8693fa7277cc0ccf",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_efff14e47f884066973c05bf114dc1a4",
+					"name": "Authorization",
+					"value": "{{api_key}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540927167933.25,
+			"method": "GET",
+			"modified": 1545325171683,
+			"name": "Continue Long Polling",
+			"parameters": [],
+			"parentId": "fld_0981a052f7f54c0fac15304a1e0eac98",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/poll",
+			"_type": "request"
+		},
+		{
+			"_id": "req_74f5df36330d4c818891c38bd37d3ce6",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"cameras\": {\n\t\t\"1002e4e5\": {\n\t\t\t\"resource\": [\n\t\t\t\t\"status\"\n\t\t\t]\n\t\t}\n\t}\n}"
+			},
+			"created": 1543953891014,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_fa4f473ea76a4b639f6731fb8316ecf7",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540927167883.25,
+			"method": "POST",
+			"modified": 1544560243103,
+			"name": "Get Status",
+			"parameters": [],
+			"parentId": "fld_0981a052f7f54c0fac15304a1e0eac98",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/poll",
+			"_type": "request"
+		},
+		{
+			"_id": "req_20aa1d392f7d4c1e91d27dc250ae1c74",
+			"authentication": {},
+			"body": {},
+			"created": 1544560254329,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1540927167833.25,
+			"method": "GET",
+			"modified": 1544564007955,
+			"name": "Get List of Events",
+			"parameters": [
+				{
+					"id": "pair_fa33e0a3151f4655b2869b22fdb09e38",
+					"name": "id",
+					"value": "1000cdc9"
+				},
+				{
+					"id": "pair_8535202279aa4e1596d36039d147ee3c",
+					"name": "start_timestamp",
+					"value": "20181211170000.000"
+				},
+				{
+					"disabled": true,
+					"id": "pair_129caa72271a439b8390d484d145866b",
+					"name": "end_timestamp",
+					"value": "20181210235959.999"
+				},
+				{
+					"id": "pair_1759341e9c7141adaacabbc9f4e5c579",
+					"name": "namespace",
+					"value": "101"
+				},
+				{
+					"id": "pair_69ab289a478d4a6181c775a1741c0fd0",
+					"name": "count",
+					"value": "10"
+				},
+				{
+					"id": "pair_68d2cf981ce94c30a50488bb81c2a5d2",
+					"name": "exclusive",
+					"value": "true"
+				}
+			],
+			"parentId": "fld_0981a052f7f54c0fac15304a1e0eac98",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{base_url}}/annt/event/list",
+			"_type": "request"
+		},
+		{
+			"_id": "req_3261623702874380b7ceb213543a4995",
+			"authentication": {},
+			"body": {},
+			"created": 1544564116738,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1544564116738,
+			"method": "GET",
+			"modified": 1544570448413,
+			"name": "Get Analytics [snapshot]",
+			"parameters": [
+				{
+					"id": "pair_e68925be9fbe4b41a817e860130ce664",
+					"name": "id",
+					"value": "1000cdc9"
+				},
+				{
+					"id": "pair_737f4efb91a54a1ba5beccdb56e9b0a3",
+					"name": "start_time",
+					"value": "20181211000000.000"
+				},
+				{
+					"id": "pair_e74067a4a9904eb2ac889d6fc87430b3",
+					"name": "end_time",
+					"value": "20181211235959.000"
+				},
+				{
+					"id": "pair_f4137f8d466f4b379667f268af8d4899",
+					"name": "ns",
+					"value": "101"
+				},
+				{
+					"id": "pair_36df08a7b0394d9ea1d86c444dfe02dc",
+					"name": "",
+					"value": ""
+				}
+			],
+			"parentId": "fld_fe599b4511d349568cfc7ec2f4242e31",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url }}/g/analytics/snapshot",
+			"_type": "request"
+		},
+		{
+			"_id": "req_088369c7a0134259b51dfe4a7de22b5a",
+			"authentication": {},
+			"body": {},
+			"created": 1544569847292,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1544058695414.5,
+			"method": "GET",
+			"modified": 1544570449107,
+			"name": "Get Analytics [aggregate]",
+			"parameters": [
+				{
+					"id": "pair_e68925be9fbe4b41a817e860130ce664",
+					"name": "id",
+					"value": "1000cdc9"
+				},
+				{
+					"id": "pair_737f4efb91a54a1ba5beccdb56e9b0a3",
+					"name": "start_time",
+					"value": "20181211000000.000"
+				},
+				{
+					"id": "pair_e74067a4a9904eb2ac889d6fc87430b3",
+					"name": "end_time",
+					"value": "20181211235959.000"
+				},
+				{
+					"id": "pair_f4137f8d466f4b379667f268af8d4899",
+					"name": "ns",
+					"value": "101"
+				},
+				{
+					"id": "pair_36df08a7b0394d9ea1d86c444dfe02dc",
+					"name": "step",
+					"value": "3600000"
+				}
+			],
+			"parentId": "fld_fe599b4511d349568cfc7ec2f4242e31",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url }}/g/analytics/aggregate",
+			"_type": "request"
+		},
+		{
+			"_id": "req_51128029e17647d1b0762e792ae4ea48",
+			"authentication": {},
+			"body": {},
+			"created": 1544569960373,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1543805984752.75,
+			"method": "GET",
+			"modified": 1544624313713,
+			"name": "Get Analytics [history]",
+			"parameters": [
+				{
+					"id": "pair_e68925be9fbe4b41a817e860130ce664",
+					"name": "id",
+					"value": "1000cdc9"
+				},
+				{
+					"id": "pair_737f4efb91a54a1ba5beccdb56e9b0a3",
+					"name": "start_time",
+					"value": "20181211000000.000"
+				},
+				{
+					"id": "pair_e74067a4a9904eb2ac889d6fc87430b3",
+					"name": "end_time",
+					"value": "20181211235959.000"
+				},
+				{
+					"id": "pair_f4137f8d466f4b379667f268af8d4899",
+					"name": "ns",
+					"value": "101"
+				},
+				{
+					"id": "pair_18a563380d9d49aea8783e8adab0c813",
+					"name": "by_roiid",
+					"value": "true"
+				}
+			],
+			"parentId": "fld_fe599b4511d349568cfc7ec2f4242e31",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url }}/g/analytics/history",
+			"_type": "request"
+		}
+	]
+}
